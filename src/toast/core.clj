@@ -13,7 +13,7 @@
   (doall (map #(do (Thread/sleep 1000) (println (- seconds %))) (range seconds))))
 
 (defn send-toast-txt [number name place]
-  '(send-txt number
+  (send-txt number
              (str "Hello " name "!  Your toast is ready for you in the " place "...")))
 
 
