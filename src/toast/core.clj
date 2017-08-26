@@ -10,7 +10,7 @@
 (defn countdown [action-description seconds]
   (println action-description)
   (Thread/sleep 3000)
-  (doall (map #(do (Thread/sleep 1000) (println (- seconds %) " ")) (range seconds))))
+  (doall (map #(do (Thread/sleep 1000) (println (- seconds %))) (range seconds))))
 
 (defn send-toast-txt [number name place]
   '(send-txt number
